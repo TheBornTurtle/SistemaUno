@@ -10,11 +10,16 @@ sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    flatDir dirs: '/usr/local/java/proguard/lib'
 }
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation 'no.tornado:tornadofx:1.7.18'
+    implementation 'com.squareup.okhttp3:okhttp:3.13.1'
+    implementation 'com.squareup.okio:okio:2.2.2'
+    classpath ':proguard:'
 }
 
 compileKotlin {
